@@ -9,6 +9,12 @@
 import UIKit
 import HomeKit
 
+extension Data {
+    var hexDescription: String {
+        return reduce("") {$0 + String(format: "%02x", $1)}
+    }
+}
+
 /**
     A `CharacteristicCell` subclass that contains a text field.
     Used for text-input characteristics.
@@ -17,6 +23,8 @@ class TextCharacteristicCell: CharacteristicCell, UITextFieldDelegate {
     // MARK: Properties
     
     @IBOutlet weak var textField: UITextField!
+    
+    
     
     override var characteristic: HMCharacteristic! {
         didSet {
@@ -31,6 +39,11 @@ class TextCharacteristicCell: CharacteristicCell, UITextFieldDelegate {
         if !notify {
             if let newStringValue = newValue as? String {
                 textField.text = newStringValue
+            }
+            else{
+                if let newStringValue = newValue as? Data {
+                    textField.text = newStringValue.hexDescription;
+                }
             }
         }
     }

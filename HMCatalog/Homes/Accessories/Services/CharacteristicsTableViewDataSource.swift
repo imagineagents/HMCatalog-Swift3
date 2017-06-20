@@ -151,10 +151,11 @@ class CharacteristicsTableViewDataSource: NSObject, UITableViewDelegate, UITable
 
         var reuseIdentifier = Identifiers.characteristicCell
         
-        if (characteristic.isReadOnly || characteristic.isWriteOnly) && !allowsAllWrites {
+        /*if (characteristic.isReadOnly || characteristic.isWriteOnly) && !allowsAllWrites {
             reuseIdentifier = Identifiers.characteristicCell
         }
-        else if characteristic.isBoolean {
+        else*/
+        if characteristic.isBoolean {
             reuseIdentifier = Identifiers.switchCharacteristicCell
         }
         else if characteristic.hasPredeterminedValueDescriptions {
@@ -163,7 +164,7 @@ class CharacteristicsTableViewDataSource: NSObject, UITableViewDelegate, UITable
         else if characteristic.isNumeric {
             reuseIdentifier = Identifiers.sliderCharacteristicCell
         }
-        else if characteristic.isTextWritable {
+        else /*if characteristic.isTextWritable */{
             reuseIdentifier = Identifiers.textCharacteristicCell
         }
         
