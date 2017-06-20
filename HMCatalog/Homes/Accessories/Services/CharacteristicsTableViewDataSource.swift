@@ -41,7 +41,7 @@ class CharacteristicsTableViewDataSource: NSObject, UITableViewDelegate, UITable
         self.tableView = tableView
         self.delegate = delegate
         self.showsFavorites = showsFavorites
-        self.allowsAllWrites = allowsAllWrites
+        self.allowsAllWrites = true;
         super.init()
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
