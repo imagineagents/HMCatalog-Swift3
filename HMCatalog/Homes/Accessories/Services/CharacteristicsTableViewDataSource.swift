@@ -25,6 +25,7 @@ class CharacteristicsTableViewDataSource: NSObject, UITableViewDelegate, UITable
         static let segmentedControlCharacteristicCell = "SegmentedControlCharacteristicCell"
         static let textCharacteristicCell = "TextCharacteristicCell"
         static let serviceTypeCell = "ServiceTypeCell"
+        static let dataCharacteristicCell = "DataCharacteristicCell"
     }
     
     // MARK: Properties
@@ -65,6 +66,9 @@ class CharacteristicsTableViewDataSource: NSObject, UITableViewDelegate, UITable
         
         let textNib = UINib(nibName: Identifiers.textCharacteristicCell, bundle: nil)
         tableView.register(textNib, forCellReuseIdentifier: Identifiers.textCharacteristicCell)
+        
+        let dataNib = UINib(nibName: Identifiers.dataCharacteristicCell, bundle: nil)
+        tableView.register(dataNib, forCellReuseIdentifier: Identifiers.dataCharacteristicCell)
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Identifiers.serviceTypeCell)
     }
@@ -164,9 +168,13 @@ class CharacteristicsTableViewDataSource: NSObject, UITableViewDelegate, UITable
         else if characteristic.isNumeric {
             reuseIdentifier = Identifiers.sliderCharacteristicCell
         }
-        else /*if characteristic.isTextWritable */{
+        else if characteristic.isTextWritable {
             reuseIdentifier = Identifiers.textCharacteristicCell
         }
+        else {
+            reuseIdentifier = Identifiers.dataCharacteristicCell
+        }
+        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CharacteristicCell
  

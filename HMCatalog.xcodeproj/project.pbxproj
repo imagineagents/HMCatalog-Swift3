@@ -77,6 +77,8 @@
 		DCF046C81A1A9D25002DBFBF /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF046C71A1A9D25002DBFBF /* AddRoomViewController.swift */; };
 		DCF046D41A1AB19F002DBFBF /* AccessoryBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF046D31A1AB19F002DBFBF /* AccessoryBrowserViewController.swift */; };
 		DCF046D61A1AB627002DBFBF /* ModifyAccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF046D51A1AB627002DBFBF /* ModifyAccessoryViewController.swift */; };
+		FCE22BBF1EFAF9EB0010CC54 /* DataCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE22BBE1EFAF9EB0010CC54 /* DataCharacteristicCell.swift */; };
+		FCE22BC11EFAFC8F0010CC54 /* DataCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE22BC01EFAFC8F0010CC54 /* DataCharacteristicCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -169,6 +171,8 @@
 		DCF046C71A1A9D25002DBFBF /* AddRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AddRoomViewController.swift; sourceTree = "<group>"; tabWidth = 4; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DCF046D31A1AB19F002DBFBF /* AccessoryBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AccessoryBrowserViewController.swift; sourceTree = "<group>"; tabWidth = 4; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DCF046D51A1AB627002DBFBF /* ModifyAccessoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ModifyAccessoryViewController.swift; sourceTree = "<group>"; tabWidth = 4; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FCE22BBE1EFAF9EB0010CC54 /* DataCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCharacteristicCell.swift; sourceTree = "<group>"; };
+		FCE22BC01EFAFC8F0010CC54 /* DataCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataCharacteristicCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +358,8 @@
 		DCF046CE1A1AB0D2002DBFBF /* Characteristic Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FCE22BC01EFAFC8F0010CC54 /* DataCharacteristicCell.xib */,
+				FCE22BBE1EFAF9EB0010CC54 /* DataCharacteristicCell.swift */,
 				DC58FA8C1A1BE5A300550AD3 /* CharacteristicCell.swift */,
 				DC58FA841A1BE59500550AD3 /* CharacteristicCell.xib */,
 				DC58FA8E1A1BE5B700550AD3 /* SegmentedControlCharacteristicCell.swift */,
@@ -484,6 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE22BC11EFAFC8F0010CC54 /* DataCharacteristicCell.xib in Resources */,
 				DC58FA8B1A1BE59500550AD3 /* SwitchCharacteristicCell.xib in Resources */,
 				DCD480611A16B31C001BFEE3 /* Main.storyboard in Resources */,
 				6A3B541F1AF92D37007CA237 /* Launch Screen.storyboard in Resources */,
@@ -524,6 +531,7 @@
 				DCF046D61A1AB627002DBFBF /* ModifyAccessoryViewController.swift in Sources */,
 				DCD480721A16C69C001BFEE3 /* ControlsTableViewDataSource.swift in Sources */,
 				6A5D85281B0CF3C5008DF524 /* TriggerCreator.swift in Sources */,
+				FCE22BBF1EFAF9EB0010CC54 /* DataCharacteristicCell.swift in Sources */,
 				DC0BBB991A1FB60E002AB35C /* ServiceGroupViewController.swift in Sources */,
 				6A96D1211B051326004DD072 /* UIColor+Custom.swift in Sources */,
 				DC58FA831A1BE32000550AD3 /* CharacteristicsViewController.swift in Sources */,
