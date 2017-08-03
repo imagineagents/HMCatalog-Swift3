@@ -170,7 +170,7 @@ class ServicesViewController: HMCatalogViewController, HMAccessoryDelegate {
         let service = displayedServices[(indexPath as NSIndexPath).row]
         
         // Inherit the name from the accessory if the Service doesn't have one.
-        cell.textLabel?.text = service.name
+        cell.textLabel?.text = service.serviceType
         cell.detailTextLabel?.text = service.localizedDescription
         return cell
     }

@@ -31,7 +31,7 @@ class ServiceCell: UITableViewCell {
         didSet {
             if let service = service,
                     let accessory = service.accessory {
-                textLabel?.text = service.name
+                textLabel?.text = service.uniqueIdentifier.uuidString
                 let accessoryName = accessory.name
                 let roomName = accessory.room!.name
                 if includeAccessoryText {

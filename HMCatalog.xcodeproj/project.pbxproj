@@ -77,6 +77,8 @@
 		DCF046C81A1A9D25002DBFBF /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF046C71A1A9D25002DBFBF /* AddRoomViewController.swift */; };
 		DCF046D41A1AB19F002DBFBF /* AccessoryBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF046D31A1AB19F002DBFBF /* AccessoryBrowserViewController.swift */; };
 		DCF046D61A1AB627002DBFBF /* ModifyAccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF046D51A1AB627002DBFBF /* ModifyAccessoryViewController.swift */; };
+		FC73DB0E1F3329A80005605F /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC73DB0D1F3329A80005605F /* HomeKit.framework */; };
+		FC73DB101F3329AA0005605F /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC73DB0F1F3329AA0005605F /* ExternalAccessory.framework */; };
 		FCE22BBF1EFAF9EB0010CC54 /* DataCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE22BBE1EFAF9EB0010CC54 /* DataCharacteristicCell.swift */; };
 		FCE22BC11EFAFC8F0010CC54 /* DataCharacteristicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE22BC01EFAFC8F0010CC54 /* DataCharacteristicCell.xib */; };
 /* End PBXBuildFile section */
@@ -171,6 +173,8 @@
 		DCF046C71A1A9D25002DBFBF /* AddRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AddRoomViewController.swift; sourceTree = "<group>"; tabWidth = 4; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DCF046D31A1AB19F002DBFBF /* AccessoryBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AccessoryBrowserViewController.swift; sourceTree = "<group>"; tabWidth = 4; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DCF046D51A1AB627002DBFBF /* ModifyAccessoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ModifyAccessoryViewController.swift; sourceTree = "<group>"; tabWidth = 4; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FC73DB0D1F3329A80005605F /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		FC73DB0F1F3329AA0005605F /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		FCE22BBE1EFAF9EB0010CC54 /* DataCharacteristicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCharacteristicCell.swift; sourceTree = "<group>"; };
 		FCE22BC01EFAFC8F0010CC54 /* DataCharacteristicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataCharacteristicCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +184,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC73DB101F3329AA0005605F /* ExternalAccessory.framework in Frameworks */,
+				FC73DB0E1F3329A80005605F /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +271,7 @@
 				6A10AEE81AF84BEA000A2CD6 /* HMCatalog.entitlements */,
 				DC1310ED1A1438CB004E5DB5 /* HMCatalog */,
 				DC1310BF1A14201E004E5DB5 /* Products */,
+				FC73DB0C1F3329A80005605F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -422,6 +429,15 @@
 			path = Homes;
 			sourceTree = "<group>";
 		};
+		FC73DB0C1F3329A80005605F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC73DB0F1F3329AA0005605F /* ExternalAccessory.framework */,
+				FC73DB0D1F3329A80005605F /* HomeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,6 +471,7 @@
 				TargetAttributes = {
 					DC1310BD1A14201E004E5DB5 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 582K64AQ2Y;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.HomeKit = {
@@ -673,12 +690,12 @@
 				CODE_SIGN_ENTITLEMENTS = HMCatalog.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 582K64AQ2Y;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/HMCatalog/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.HMCatalog";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simont.test;
 				PRODUCT_NAME = HMCatalog;
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -692,12 +709,12 @@
 				CODE_SIGN_ENTITLEMENTS = HMCatalog.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 582K64AQ2Y;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/HMCatalog/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.HMCatalog";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simont.test;
 				PRODUCT_NAME = HMCatalog;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

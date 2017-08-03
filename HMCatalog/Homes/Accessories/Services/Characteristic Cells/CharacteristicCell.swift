@@ -112,7 +112,7 @@ class CharacteristicCell: UITableViewCell {
     */
     var characteristic: HMCharacteristic! {
         didSet {
-            typeLabel.text = characteristic.localizedCharacteristicType
+            typeLabel.text = characteristic.characteristicType   //localizedCharacteristicType
             
             selectionStyle = characteristic.isIdentify ? .default : .none
             
