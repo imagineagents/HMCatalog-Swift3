@@ -67,7 +67,7 @@ class DataCharacteristicCell: CharacteristicCell, UITextFieldDelegate {
             }
             else{
                 if let newStringValue = newValue as? Data {
-                    textField.text = newStringValue.hexDescription;
+                    textField.text = textField.text! + " ; " + newStringValue.hexDescription;
                 }
             }
         }
